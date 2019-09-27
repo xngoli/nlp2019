@@ -1,0 +1,15 @@
+define Vowel a | i | u;
+define Stop p | t | k;
+define Fricative f | s | h;
+define Consonant Stop | Fricative;
+define Input Vowel* [Consonant Vowel+]+;
+
+define A Vowel -> u || Fricative _ u;
+define B Vowel -> u || Stop _ u;
+define AoB A .o. B;
+define Exception h a u -> h u a || _;
+define EPAoB E .P. B;
+
+define GrammarRegular = Input .o. AoB;
+define GrammarException = Input .o. EPAoB;
+

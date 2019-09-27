@@ -1,0 +1,260 @@
+Foma, version 0.9.18alpha
+Copyright © 2008-2014 Mans Hulden
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; for details, type "help license"
+
+Type "help" to list all commands available.
+Type "help <topic>" or help "<operator>" for further help.
+
+foma[0]: regex a | b ;
+287 bytes. 2 states, 2 arcs, 2 paths.
+foma[1]: down
+apply down> a
+a
+apply down> b
+b
+apply down> c
+???
+apply down> 
+
+Foma, version 0.9.18alpha
+Copyright © 2008-2014 Mans Hulden
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; for details, type "help license"
+
+Type "help" to list all commands available.
+Type "help <topic>" or help "<operator>" for further help.
+
+foma[0]: regex a | b ;
+287 bytes. 2 states, 2 arcs, 2 paths.
+foma[1]: view
+foma[1]: down
+apply down> a
+a
+apply down> b
+b
+apply down> c
+???
+apply down> 
+foma[1]: clear
+foma[0]: regex a b ;
+287 bytes. 3 states, 2 arcs, 1 path.
+foma[1]: view
+foma[1]: regex [ a | b ] b ;
+303 bytes. 3 states, 3 arcs, 2 paths.
+foma[2]: viw
+Unknown command. Ignoring until end of line.
+foma[2]: view
+foma[2]: down
+apply down> aa
+???
+apply down> ab
+ab
+apply down> bb
+bb
+apply down> 
+foma[2]: regex c:a a:o t:g;
+407 bytes. 4 states, 3 arcs, 1 path.
+foma[3]: view
+foma[3]: clear
+foma[0]: define MURDERER c:d a:o t:g;
+defined MURDERER: 407 bytes. 4 states, 3 arcs, 1 path.
+foma[0]: source example.foma 
+Opening file 'example.foma'.
+defined Vowel: 329 bytes. 2 states, 3 arcs, 3 paths.
+defined Stop: 329 bytes. 2 states, 3 arcs, 3 paths.
+defined Fricative: 329 bytes. 2 states, 3 arcs, 3 paths.
+defined Consonant: 455 bytes. 2 states, 6 arcs, 6 paths.
+defined Input: 757 bytes. 3 states, 21 arcs, Cyclic.
+defined A: 798 bytes. 4 states, 23 arcs, Cyclic.
+defined B: 798 bytes. 4 states, 23 arcs, Cyclic.
+defined AoB: 1020 bytes. 4 states, 32 arcs, Cyclic.
+defined Exception: 560 bytes. 4 states, 13 arcs, Cyclic.
+defined EPAoB: 872 bytes. 4 states, 26 arcs, Cyclic.
+defined GrammarRegular: 1.0 kB. 6 states, 33 arcs, Cyclic.
+defined GrammarException: 1.1 kB. 7 states, 36 arcs, Cyclic.
+foma[0]: push Input
+757 bytes. 3 states, 21 arcs, Cyclic.
+foma[1]: view
+foma[1]: down
+apply down> huhu
+huhu
+apply down> huhuh
+???
+apply down> 
+
+Foma, version 0.9.18alpha
+Copyright © 2008-2014 Mans Hulden
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; for details, type "help license"
+
+Type "help" to list all commands available.
+Type "help <topic>" or help "<operator>" for further help.
+
+foma[0]: define Vowel a | i | u ;
+defined Vowel: 329 bytes. 2 states, 3 arcs, 3 paths.
+foma[0]: define Stop p | t | k ;
+defined Stop: 329 bytes. 2 states, 3 arcs, 3 paths.
+foma[0]: define Fricative f | s | h ;
+defined Fricative: 329 bytes. 2 states, 3 arcs, 3 paths.
+foma[0]: define Consonant Stop | Fricative ;
+defined Consonant: 455 bytes. 2 states, 6 arcs, 6 paths.
+foma[0]: define Input Vowel [Consonant Vowel+]+;
+defined Input: 757 bytes. 3 states, 21 arcs, Cyclic.
+foma[0]: define A Vowel -> u || Consonant _ u ;
+defined A: 1020 bytes. 4 states, 32 arcs, Cyclic.
+foma[0]: define B [..] -> h || Vowel _ Vowel ;
+defined B: 554 bytes. 3 states, 11 arcs, Cyclic.
+foma[0]: define C u u -> u || Consonant _ ;
+defined C: 396 bytes. 3 states, 6 arcs, Cyclic.
+foma[0]: push A
+1020 bytes. 4 states, 32 arcs, Cyclic.
+foma[1]: down
+apply down> huh
+huh
+apply down> hauh
+huuh
+apply down> 
+foma[1]: view
+foma[1]: define Rules A .o. C .o. B ;
+defined Rules: 1.4 kB. 11 states, 59 arcs, Cyclic.
+foma[1]: push Rules;
+1.4 kB. 11 states, 59 arcs, Cyclic.
+foma[2]: down
+apply down> hauh
+huh
+apply down> haah
+hahah
+apply down> haaah
+hahahah
+apply down> huuuh
+huhuh
+huhuh
+apply down> 
+foma[2]: regex A .o. C;
+1.2 kB. 6 states, 45 arcs, Cyclic.
+foma[3]: down
+apply down> hauh
+huh
+apply down> 
+foma[3]: regex A .o. B ;
+1.2 kB. 8 states, 45 arcs, Cyclic.
+foma[4]: down
+apply down> hauh
+huhuh
+apply down> 
+foma[4]: 
+Foma, version 0.9.18alpha
+Copyright © 2008-2014 Mans Hulden
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; for details, type "help license"
+
+Type "help" to list all commands available.
+Type "help <topic>" or help "<operator>" for further help.
+
+foma[0]: source finnish.foma
+Error opening file 'finnish.foma'
+foma[0]: source finnish_noun.foma
+Opening file 'finnish_noun.foma'.
+defined Consonant: 1.0 kB. 2 states, 20 arcs, 20 paths.
+defined FrontVowel: 331 bytes. 2 states, 3 arcs, 3 paths.
+defined NeutralVowel: 287 bytes. 2 states, 2 arcs, 2 paths.
+defined BackVowel: 329 bytes. 2 states, 3 arcs, 3 paths.
+defined Vowel: 625 bytes. 2 states, 10 arcs, 10 paths.
+defined Letter: 1.4 kB. 2 states, 30 arcs, 30 paths.
+defined Case: 428 bytes. 2 states, 5 arcs, 5 paths.
+defined Number: 291 bytes. 2 states, 2 arcs, 2 paths.
+defined FrontStem: 1.6 kB. 2 states, 50 arcs, Cyclic.
+defined BackStem: 1.6 kB. 2 states, 50 arcs, Cyclic.
+defined Stem: 1.9 kB. 2 states, 60 arcs, Cyclic.
+defined Input: 2.2 kB. 4 states, 67 arcs, Cyclic.
+defined NomPl: 575 bytes. 3 states, 12 arcs, Cyclic.
+defined NomSg: 517 bytes. 3 states, 10 arcs, Cyclic.
+defined Nominatives: 683 bytes. 4 states, 17 arcs, Cyclic.
+defined GenDen: 1.6 kB. 6 states, 62 arcs, Cyclic.
+defined Gen: 435 bytes. 2 states, 5 arcs, Cyclic.
+defined Genetive: 1.6 kB. 6 states, 62 arcs, Cyclic.
+defined PartTa: 3.8 kB. 6 states, 171 arcs, Cyclic.
+defined PartA: 378 bytes. 1 state, 3 arcs, Cyclic.
+defined LocativeCases: 553 bytes. 4 states, 9 arcs, Cyclic.
+defined OtherCases: 4.0 kB. 8 states, 183 arcs, Cyclic.
+defined Sg: 376 bytes. 1 state, 3 arcs, Cyclic.
+defined OmitA: 547 bytes. 3 states, 12 arcs, Cyclic.
+defined Ai2Oi: 3.1 kB. 5 states, 129 arcs, Cyclic.
+defined Ai2i: 3.1 kB. 5 states, 129 arcs, Cyclic.
+defined OmitFirst: 3.9 kB. 7 states, 179 arcs, Cyclic.
+defined Pl: 434 bytes. 2 states, 5 arcs, Cyclic.
+defined NumberInfl: 13.7 kB. 32 states, 803 arcs, Cyclic.
+defined JotPl: 1.2 kB. 4 states, 42 arcs, Cyclic.
+defined HarmonyBack: 3.1 kB. 4 states, 128 arcs, Cyclic.
+defined HarmonyFront: 3.1 kB. 4 states, 128 arcs, Cyclic.
+defined Phonetics: 15.0 kB. 36 states, 891 arcs, Cyclic.
+defined DoublePTK: 8.5 kB. 18 states, 474 arcs, Cyclic.
+defined SingleP: 4.8 kB. 10 states, 238 arcs, Cyclic.
+defined SingleTK: 5.4 kB. 11 states, 276 arcs, Cyclic.
+defined TwoLetter: 8.3 kB. 18 states, 463 arcs, Cyclic.
+defined ThreeLetter: 7.3 kB. 17 states, 400 arcs, Cyclic.
+defined N2M: 2.1 kB. 10 states, 95 arcs, Cyclic.
+defined EOmit: 1.1 kB. 3 states, 36 arcs, Cyclic.
+defined EReal: 374 bytes. 1 state, 3 arcs, Cyclic.
+defined Alternations: 35.4 kB. 96 states, 2199 arcs, Cyclic.
+defined Affixes: 980.6 kB. 2022 states, 62680 arcs, Cyclic.
+defined Cleanup: 332 bytes. 1 state, 2 arcs, Cyclic.
+defined Grammar: 217.2 kB. 592 states, 13820 arcs, Cyclic.
+217.2 kB. 592 states, 13820 arcs, Cyclic.
+foma[1]: save stack finnish.bin
+Writing to file finnish.bin.
+foma[1]: clear
+foma[0]: source finnish_noun.foma
+Opening file 'finnish_noun.foma'.
+redefined Consonant: 1.0 kB. 2 states, 20 arcs, 20 paths.
+redefined FrontVowel: 331 bytes. 2 states, 3 arcs, 3 paths.
+redefined NeutralVowel: 287 bytes. 2 states, 2 arcs, 2 paths.
+redefined BackVowel: 329 bytes. 2 states, 3 arcs, 3 paths.
+redefined Vowel: 625 bytes. 2 states, 10 arcs, 10 paths.
+redefined Letter: 1.4 kB. 2 states, 30 arcs, 30 paths.
+redefined Case: 428 bytes. 2 states, 5 arcs, 5 paths.
+redefined Number: 291 bytes. 2 states, 2 arcs, 2 paths.
+redefined FrontStem: 1.6 kB. 2 states, 50 arcs, Cyclic.
+redefined BackStem: 1.6 kB. 2 states, 50 arcs, Cyclic.
+redefined Stem: 1.9 kB. 2 states, 60 arcs, Cyclic.
+redefined Input: 2.2 kB. 4 states, 67 arcs, Cyclic.
+redefined NomPl: 575 bytes. 3 states, 12 arcs, Cyclic.
+redefined NomSg: 517 bytes. 3 states, 10 arcs, Cyclic.
+redefined Nominatives: 683 bytes. 4 states, 17 arcs, Cyclic.
+redefined GenDen: 1.6 kB. 6 states, 62 arcs, Cyclic.
+redefined Gen: 435 bytes. 2 states, 5 arcs, Cyclic.
+redefined Genetive: 1.6 kB. 6 states, 62 arcs, Cyclic.
+redefined PartTa: 3.8 kB. 6 states, 171 arcs, Cyclic.
+redefined PartA: 378 bytes. 1 state, 3 arcs, Cyclic.
+redefined LocativeCases: 553 bytes. 4 states, 9 arcs, Cyclic.
+redefined OtherCases: 4.0 kB. 8 states, 183 arcs, Cyclic.
+redefined Sg: 376 bytes. 1 state, 3 arcs, Cyclic.
+redefined OmitA: 547 bytes. 3 states, 12 arcs, Cyclic.
+redefined Ai2Oi: 3.1 kB. 5 states, 129 arcs, Cyclic.
+redefined Ai2i: 3.1 kB. 5 states, 129 arcs, Cyclic.
+redefined OmitFirst: 3.9 kB. 7 states, 179 arcs, Cyclic.
+redefined Pl: 434 bytes. 2 states, 5 arcs, Cyclic.
+redefined NumberInfl: 13.7 kB. 32 states, 803 arcs, Cyclic.
+redefined JotPl: 1.2 kB. 4 states, 42 arcs, Cyclic.
+redefined HarmonyBack: 3.1 kB. 4 states, 128 arcs, Cyclic.
+redefined HarmonyFront: 3.1 kB. 4 states, 128 arcs, Cyclic.
+redefined Phonetics: 15.0 kB. 36 states, 891 arcs, Cyclic.
+redefined DoublePTK: 8.5 kB. 18 states, 474 arcs, Cyclic.
+redefined SingleP: 4.8 kB. 10 states, 238 arcs, Cyclic.
+redefined SingleTK: 5.4 kB. 11 states, 276 arcs, Cyclic.
+redefined TwoLetter: 8.3 kB. 18 states, 463 arcs, Cyclic.
+redefined ThreeLetter: 7.3 kB. 17 states, 400 arcs, Cyclic.
+redefined N2M: 2.1 kB. 10 states, 95 arcs, Cyclic.
+redefined EOmit: 1.1 kB. 3 states, 36 arcs, Cyclic.
+redefined EReal: 374 bytes. 1 state, 3 arcs, Cyclic.
+redefined Alternations: 35.4 kB. 96 states, 2199 arcs, Cyclic.
+redefined Affixes: 980.6 kB. 2022 states, 62680 arcs, Cyclic.
+redefined Cleanup: 332 bytes. 1 state, 2 arcs, Cyclic.
+redefined Grammar: 217.2 kB. 592 states, 13820 arcs, Cyclic.
+217.2 kB. 592 states, 13820 arcs, Cyclic.
+foma[1]: save stack finnish.bin
+Writing to file finnish.bin.
+foma[1]: 
+
+ilyam@pop-os:~/Документы/Работа/ВШЭ/Автобрея$ flookup -i finnish_noun.bin < finnish_words.in > finnish_words.out
