@@ -8,4 +8,4 @@
 |27.09|Лекция 3. [Морфология. Обзор](https://github.com/xngoli/nlp2019/blob/master/lectures/CL1_3L_MorphOverw_2019.pptx) + [FST](https://www.cs.vassar.edu/~cs395/docs/3.pdf)|[FOMA](https://github.com/xngoli/nlp2019/tree/master/seminars/FOMA)|[Финское словоизменение](https://github.com/xngoli/nlp2019/tree/master/hometasks/FOMA)|10:00 14.10|
 |4.10| Лекция 4. [FST-FSA](https://github.com/xngoli/nlp2019/blob/master/lectures/2019_CL1_L_FSA-FST.pptx) <br> Лекция 5. [Морфологическая аннотация и дизамбигуация](https://github.com/xngoli/nlp2019/blob/master/lectures/2019_CL1_L_disambiguation.pptx)|[POS-tagging (NLTK, spaCy, Flair, BERT](https://github.com/xngoli/nlp2019/blob/master/seminars/4_POS_Tagging.ipynb)|||
 |11.10|Синтаксис. Введение. <br> Контекстно-свободные грамматики. Алгоритмы |НС грамматики в Tomita|Экзаменационный проект: <br> автоматический морфологический анализ||
-|18.10|Синтаксис|Universal Dependencies|||
+|18.10|Синтаксис|Universal Dependencies|Альтернативный экзаменационный проект. <Br> Автоматический синтаксический анализ||
